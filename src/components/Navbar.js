@@ -1,53 +1,72 @@
 import Link from "next/link";
 import React from "react";
-import Logo from "./Logo";
+import { motion } from "framer-motion";
 
-const CustomLink = ({ href, className = "", children }) => (
-  <Link href={href} className={`${className} relative`}>
-    {children}
-    <span className="h-[1px] inline-block w-full bg-dark absolute left-0 -bottom-0.5">
-      &nbsp;
-    </span>
-    {/* TODO: Continue from 33:46 */}
-  </Link>
-);
+import Logo from "./Logo";
+import { GithubIcon, LinkedInIcon, XTwitterIcon } from "./Icons";
+import { useRouter } from "next/router";
+
+const NavLink = ({ href, className = "", children }) => {
+  const router = useRouter();
+  return (
+    <Link href={href} className={`${className} relative group`}>
+      {children}
+      <span
+        className={`h-[1px] inline-block  bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
+          router.asPath === href ? "w-full" : "w-0"
+        }`}
+      >
+        &nbsp;
+      </span>
+      {/* TODO: Continue from 33:46 */}
+    </Link>
+  );
+};
+
+const IconLink = ({ href, className, children }) => {
+  return (
+    <motion.a
+      href={href}
+      target="_blank"
+      className={`${className} w-6`}
+      whileHover={{ y: -2 }}
+      whileTap={{ scale: 0.9 }}
+    >
+      {children}
+    </motion.a>
+  );
+};
 
 const Navbar = () => {
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
       <nav>
-        <CustomLink href="/" className="mr-4">
+        <NavLink href="/" className="mr-4">
           Home
-        </CustomLink>
-        <CustomLink href="/about" className="mx-4">
+        </NavLink>
+        <NavLink href="/about" className="mx-4">
           About
-        </CustomLink>
-        <CustomLink href="/projects" className="mx-4">
+        </NavLink>
+        <NavLink href="/projects" className="mx-4">
           Projects
-        </CustomLink>
-        <CustomLink href="/articles" className="ml-4">
+        </NavLink>
+        <NavLink href="/articles" className="ml-4">
           Articles
-        </CustomLink>
+        </NavLink>
       </nav>
-      <nav>
-        <Link href="/" target="_blank">
-          T
-        </Link>
-        <Link href="/" target="_blank">
-          T
-        </Link>
-        <Link href="/" target="_blank">
-          T
-        </Link>
-        <Link href="/" target="_blank">
-          T
-        </Link>
-        <Link href="/" target="_blank">
-          T
-        </Link>
-        <Link href="/" target="_blank">
-          T
-        </Link>
+      <nav className="flex items-center justify-center flex-wrap">
+        <IconLink href="https://twitter.com/fajitatt" className="mr-4">
+          <XTwitterIcon />
+        </IconLink>
+        <IconLink href="https://github.com/johncookv" className="mx-4">
+          <GithubIcon />
+        </IconLink>
+        <IconLink
+          href="https://www.linkedin.com/in/johnvehikite/"
+          className="ml-4"
+        >
+          <LinkedInIcon />
+        </IconLink>
       </nav>
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
