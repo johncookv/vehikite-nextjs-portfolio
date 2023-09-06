@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "@/components/Layout";
-import profilePic from "../../public/images/profile/john_vehikite_profile_pic_art_ellipsis_with_space.png";
+import heroImage from "../../public/images/profile/software_developer_final.png";
+import lightBulbImage from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
+import HireMe from "@/components/HireMe";
 
 export default function Home() {
   return (
@@ -20,7 +22,7 @@ export default function Home() {
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
               <Image
-                src={profilePic}
+                src={heroImage}
                 alt="John Vehikite"
                 className="w-full h-auto"
               />
@@ -59,6 +61,15 @@ export default function Home() {
             </div>
           </div>
         </Layout>
+
+        <HireMe />
+        <div className="absolute right-8 bottom-8 inline-block w-24">
+          <Image
+            src={lightBulbImage}
+            alt="light bulb"
+            className="w-full h-auto"
+          />
+        </div>
       </main>
     </>
   );
