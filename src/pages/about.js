@@ -2,7 +2,7 @@ import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import React, { useEffect, useRef } from "react";
-import profileImage from "../../public/images/profile/john_vehikite_profile_pic.png";
+import profileImage from "../../public/images/profile/john_vehikite_profile_pic_white_bg.png";
 import Image from "next/image";
 import { useInView, useSpring, useMotionValue } from "framer-motion";
 
@@ -49,7 +49,7 @@ const about = () => {
                 Biography
               </h2>
               <p className="font-medium">
-                {`Hi, I'm CodeBucks, a web developer and UI/UX designer with a
+                {`Hi, I'm John Vehikite, a web developer and UI/UX designer with a
                 passion for creating beautiful, functional, and user-centered
                 digital experiences. With 4 years of experience in the field. I
                 am always looking for new and innovative ways to bring my
