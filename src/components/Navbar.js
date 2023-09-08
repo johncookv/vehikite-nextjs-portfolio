@@ -55,17 +55,17 @@ const Navbar = () => {
         </NavLink>
       </nav>
       <nav className="flex items-center justify-center flex-wrap">
-        <IconLink href="https://twitter.com/fajitatt" className="mr-4">
-          <XTwitterIcon />
-        </IconLink>
-        <IconLink href="https://github.com/johncookv" className="mx-4">
-          <GithubIcon />
-        </IconLink>
         <IconLink
           href="https://www.linkedin.com/in/johnvehikite/"
           className="ml-4"
         >
           <LinkedInIcon />
+        </IconLink>
+        <IconLink href="https://github.com/johncookv" className="mx-4">
+          <GithubIcon />
+        </IconLink>
+        <IconLink href="https://twitter.com/fajitatt" className="mr-4">
+          <XTwitterIcon />
         </IconLink>
       </nav>
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
