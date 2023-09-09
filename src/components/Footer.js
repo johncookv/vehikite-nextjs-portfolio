@@ -14,7 +14,7 @@ const Footer = () => {
           Built with <span className="text-primary text-2xl px-1">&#9825;</span>
           by&nbsp;
           <Link
-            href="/"
+            href="https://github.com/johncookv"
             className="underline underline-offset-2"
             target="_blank"
           >
