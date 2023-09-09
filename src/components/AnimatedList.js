@@ -22,15 +22,15 @@ const AnimatedListItem = ({
       >
         <h3 className="capitalize font-bold text-2xl">
           {title}&nbsp;
-          {link && linkText ? (
+          {link && linkText && (
             <a href={link} target="_blank" className="text-primary capitalize">
               @&nbsp;{linkText}
             </a>
-          ) : null}
+          )}
         </h3>
         <span className="capitalize font-medium text-dark/75">
           {subTitle}
-          {subTitleDetail ? `| ${subTitleDetail}` : null}
+          {subTitleDetail ? ` | ${subTitleDetail}` : null}
         </span>
         <p className="font-medium w-full">{description}</p>
       </motion.div>

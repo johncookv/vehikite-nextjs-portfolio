@@ -47,7 +47,7 @@ export const occupations = [
   {
     title: "Junior Software Engineer",
     linkText: "Nudge for Change",
-    link: "https://play.google.com/store/apps/details?id=com.nudgeyourself.nudge&hl=en_US&gl=US",
+    link: "https://appadvice.com/app/nudge-for-change/1224246273",
     subTitle: "Mar. 2016 - Jun. 2016",
     subTitleDetail: "Oakland, CA",
     description:

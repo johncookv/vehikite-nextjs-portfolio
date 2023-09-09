@@ -29,15 +29,16 @@ export default function Home() {
             </div>
             <div className="w-1/2 flex flex-col items-center self-center">
               <AnimatedText
-                text="Turning Vision Into Reality With Code And Design."
+                text="Software visions realized"
                 className="!text-6xl text-left"
               />
 
               <p className="my-4 text-base font-medium">
-                As a skilled full-stack developer, I am dedicated to turning
-                ideas into innovative web applications. Explore my latest
-                projects and articles, showcasing my expertise in React.js and
-                web development.
+                As a proficient and experienced fullstack engineer, I revel in
+                producing software solutions to complex problems. Take a look
+                around and explore my skills, experience, and projects, and see
+                why companies and businesses trust me with creating their
+                software.
               </p>
               <div className="flex items-center self-start mt-2">
                 <Link
