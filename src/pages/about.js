@@ -6,6 +6,8 @@ import profileImage from "../../public/images/profile/john_vehikite_profile_pic_
 import Image from "next/image";
 import { useInView, useSpring, useMotionValue } from "framer-motion";
 import Skills from "@/components/Skills";
+import AnimatedList from "@/components/AnimatedList";
+import { occupations, educations } from "@/content/content";
 
 const AnimatedNumber = ({ value }) => {
   const ref = useRef(null);
@@ -110,6 +112,8 @@ const about = () => {
             </div>
           </div>
           <Skills />
+          <AnimatedList listTitle="Experience" items={occupations} />
+          <AnimatedList listTitle="Education" items={educations} />
         </Layout>
       </main>
     </>
