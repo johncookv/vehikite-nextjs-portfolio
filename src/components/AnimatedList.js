@@ -42,7 +42,7 @@ const AnimatedList = ({ listTitle, items }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "center start"],
+    offset: ["start end", "0.75 center"],
   });
   return (
     <div className="my-64">
