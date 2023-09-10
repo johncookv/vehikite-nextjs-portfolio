@@ -15,7 +15,7 @@ const AnimatedListItem = ({
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto md:w-[80%]"
+      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto md:my-4 md:w-[80%]"
     >
       <ListItemIcon reference={ref} />
       <motion.div
