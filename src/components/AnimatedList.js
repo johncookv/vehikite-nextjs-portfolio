@@ -48,7 +48,7 @@ const AnimatedList = ({ listTitle, items }) => {
     offset: ["start end", "0.75 center"],
   });
   return (
-    <div className="my-64 md:my-32">
+    <div className="my-64 md:my-32 sm:my-16">
       <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
         {listTitle}
       </h2>
