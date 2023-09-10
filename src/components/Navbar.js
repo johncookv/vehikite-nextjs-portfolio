@@ -33,11 +33,11 @@ const MobileNavLink = ({ href, className = "", children, closeModal }) => {
   return (
     <button
       onClick={handleClick}
-      className={`${className} relative group text-light dark:text-dark my-2`}
+      className={`${className} relative group text-light my-2`}
     >
       {children}
       <span
-        className={`h-[1px] inline-block  bg-light dark:bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
+        className={`h-[1px] inline-block  bg-light absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
           router.asPath === href ? "w-full" : "w-0"
         }`}
       >
@@ -77,17 +77,17 @@ const Navbar = () => {
         className="flex-col justify-center items-center hidden lg:flex"
       >
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+          className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
             isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
           }`}
         ></span>
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+          className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
             isOpen ? "opacity-0" : "opacity-100"
           }`}
         ></span>
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+          className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
             isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
           }`}
         ></span>
@@ -129,7 +129,7 @@ const Navbar = () => {
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1 }}
           className={`min-w-[70vw] flex-col justify-between items-center fixed z-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-      bg-dark/90 dark:bg-light/75 rounded-lg backdrop:blur-md py-32 hidden lg:flex `}
+      bg-dark/90 rounded-lg backdrop:blur-md py-32 hidden lg:flex `}
         >
           <nav className="flex items-center flex-col justify-center">
             <MobileNavLink closeModal={() => setIsOpen(false)} href="/">
@@ -154,13 +154,13 @@ const Navbar = () => {
             </IconLink>
             <IconLink
               href="https://github.com/johncookv"
-              className="mx-4 sm:mx-1 bg-light rounded-full dark:bg-dark"
+              className="mx-4 sm:mx-1 bg-light rounded-full"
             >
               <GithubIcon />
             </IconLink>
             <IconLink
               href="https://twitter.com/fajitatt"
-              className="mr-4 sm:mx-1 bg-light rounded-full dark:bg-dark"
+              className="mr-4 sm:mx-1 bg-light rounded-full"
             >
               <XTwitterIcon />
             </IconLink>

@@ -43,7 +43,7 @@ const about = () => {
           content="Information about Fullstack Software Engineer John Vehikite"
         />
       </Head>
-      <main className="flex w-full flex-col items-center justify-center bg-light text-dark dark:text-light">
+      <main className="flex w-full flex-col items-center justify-center bg-light text-dark">
         <Layout className="pt-16">
           <AnimatedText
             text="Price of Greatness = responsibility"
@@ -76,7 +76,7 @@ const about = () => {
             </div>
             <div
               className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark
-            bg-light p-8 dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span-8"
+            bg-light p-8 xl:col-span-4 md:order-1 md:col-span-8"
             >
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image

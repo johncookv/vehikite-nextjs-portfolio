@@ -19,10 +19,10 @@ const FeaturedProject = ({ type, title, summary, img, link, githubLink }) => {
   return (
     <article
       className="w-full flex items-center justify-between relative rounded-br-2xl
-    rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light
+    rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12
     lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p4"
     >
-      <div class="absolute  top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light  xs:-right-2 xs:h-[102%] xs:w-full xs:rounded-[1.5rem] " />
+      <div class="absolute  top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark xs:-right-2 xs:h-[102%] xs:w-full xs:rounded-[1.5rem] " />
       <Link
         href={link}
         target="_blank"
@@ -51,9 +51,7 @@ const FeaturedProject = ({ type, title, summary, img, link, githubLink }) => {
             {title}
           </h2>
         </Link>
-        <p className="my-2 font-medium text-dark dark:text-light sm:text-sm ">
-          {summary}
-        </p>
+        <p className="my-2 font-medium text-dark sm:text-sm ">{summary}</p>
         <div className="mt-2 flex items-center">
           {githubLink && (
             <Link className="w-10 mr-4" href={githubLink} target="_blank">
@@ -77,9 +75,9 @@ const Project = ({ title, type, img, link, githubLink }) => {
   return (
     <article
       className="w-full flex flex-col items-center justify-center rounded-2xl
-    border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light xs:p-4"
+    border border-solid border-dark bg-light p-6 relative xs:p-4"
     >
-      <div class="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light  md:-right-2 md:w-[101%] sm:h-[102%] xs:rounded-[1.5rem]" />
+      <div class="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark md:-right-2 md:w-[101%] sm:h-[102%] xs:rounded-[1.5rem]" />
       <Link
         href={link}
         target="_blank"
@@ -96,7 +94,7 @@ const Project = ({ title, type, img, link, githubLink }) => {
         />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark lg:text-lg md:text-base">
+        <span className="text-primary font-medium text-xl lg:text-lg md:text-base">
           {type}
         </span>
         <Link
@@ -137,7 +135,7 @@ const projects = () => {
           content="Information about projects done by John Vehikite"
         />
       </Head>
-      <main className="w-full flex flex-col items-center justify-center bg-light text-dark dark:text-light">
+      <main className="w-full flex flex-col items-center justify-center bg-light text-dark ">
         <Layout className="pt-16">
           <AnimatedText
             className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"

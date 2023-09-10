@@ -31,7 +31,7 @@ const AnimatedListItem = ({
             </a>
           )}
         </h3>
-        <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
+        <span className="capitalize font-medium text-dark/75 xs:text-sm">
           {subTitle}
           {subTitleDetail ? ` | ${subTitleDetail}` : null}
         </span>
